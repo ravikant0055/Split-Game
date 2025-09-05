@@ -131,7 +131,7 @@ const handleStart = async () => {
 
   return (
     <div className='bg-[#ffcea0] flex justify-center w-full h-screen'>
-      <div className='bg-white flex flex-col items-center justify-between py-5 w-[550px] my-6 rounded-xl shadow-xl'>
+      <div className='bg-white flex flex-col items-center justify-evenly md:justify-between py-5 w-full md:w-[550px] md:my-6 md:rounded-xl md:shadow-xl'>
         <h1 className='font-extrabold text-xl'>Split<span className='text-[#ff005d]'>Cards</span></h1>
 
         <div className='w-[92%] flex flex-col gap-5 items-center rounded-md border-slate-400 p-2'>
@@ -147,7 +147,7 @@ const handleStart = async () => {
             <div
               key={i}
               onClick={() => handleCardClick(i)}
-              className={`card w-[110px] h-[150px] rounded shadow-lg cursor-pointer ${card.isFlipped || card.isMatched ? 'flipped' : ''}`}
+              className={`card w-[70px] md:w-[110px] h-[100px] md:h-[150px] rounded shadow-lg cursor-pointer ${card.isFlipped || card.isMatched ? 'flipped' : ''}`}
             >
               <div className="card-inner">
                 <div className="card-front bg-gradient-to-tl from-[#ff9500] to-[#ff9589] w-full h-full flex items-center justify-center">
@@ -159,7 +159,6 @@ const handleStart = async () => {
                 </div>
               </div>
             </div>
-
           ))}
         </div>
       </div>
